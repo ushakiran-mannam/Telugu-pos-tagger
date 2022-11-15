@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>TELUGU POS TAGGER</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>RULE BASED POS TAGGER FOR TELUGU</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('tag')}}"method="post">
+    	<input type="text" name="experience" placeholder="Telugu Text" required="required" />
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Tag</button>
+    </form>
+    <br>
+    <br>
+      {{ prediction_text }}
+    <br>
+    <br>
+      {{ after_disambiguity }}
+    <br>
+
+   <br>
+   
+
+ </div>
+ <div class="instructor">
+  <h4>INSTRUCTOR: DR. ARNAB BHATTACHARYA</h4>
+ </div>
+
+  <img src="https://www2.cse.iitk.ac.in/~iwml/2016/images/iitk.png" class="logo"/>
+
+
+</body>
+</html>
