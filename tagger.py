@@ -17,7 +17,7 @@ def find_noun(word):
     
     noun_pattern_two = re.compile(r'ణం$|సం$|వం$|తం$|గారు$|యం$|నం$|లం$')
     
-    noun_pattern_three = re.compile(r'కు$|లో$|తో$|ను$|తొ$|లొ$|నే$')
+    noun_pattern_three = re.compile(r'కు$|లో$|తో$|ను$|తొ$|లొ$|నే$| ్$')
 
     if(noun_pattern_one.search(word)):
         return (True,"NN")
@@ -42,7 +42,7 @@ def find_pronoun(word):
     
     pronoun_pattern_five = re.compile(r'అతను$|నిన్ను$|ఆయన$|వాడు|నన్ను$|నువ్వు$')
     
-    pronoun_pattern_six = re.compile(r'నీకు$|నాకు$|మనకు$|ఆయనకు$|ఆమెకు$|మీకు$|మాకు$|తనకు$|వాళ్లకు$|తమకు$|తన$')
+    pronoun_pattern_six = re.compile(r'నీకు$|నాకు$|మనకు$|ఆయనకు$|ఆమెకు$|మీకు$|మాకు$|తనకు$|వాళ్లకు$|తమకు$|తన$|ఇతరులకు$')
     
     pronoun_pattern_seven = re.compile(r'^ఆమె|^ఆయన|^తన|^వాళ్ళ') # to counter nouns ending with 'nu' and 'tho'
     
