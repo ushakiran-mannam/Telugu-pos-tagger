@@ -17,7 +17,7 @@ def find_noun(word):
     
     noun_pattern_two = re.compile(r'ణం$|సం$|వం$|తం$|గారు$|యం$|నం$|లం$')
     
-    noun_pattern_three = re.compile(r'కు$|లో$|తో$|ను$|తొ$|లొ$|నే$| ్$')
+    noun_pattern_three = re.compile(r'కు$|లో$|తో$|ను$|తొ$|లొ$|నే$')
 
     if(noun_pattern_one.search(word)):
         return (True,"NN")
@@ -277,7 +277,7 @@ def find_adverb(word):
 
 def find_conjunction(word):
 
-    conjunction_pattern_one = re.compile(r'మరియు$|కానీ$|గానీ$|అని$|లేక$')
+    conjunction_pattern_one = re.compile(r'మరియు$|కానీ$|గానీ$|అని$|లేక$|పాటు$')
 
     if(conjunction_pattern_one.search(word)):
         return (True,"CC")

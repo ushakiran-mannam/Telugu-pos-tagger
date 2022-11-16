@@ -36,19 +36,5 @@ def tag():
     return render_template('index.html', prediction_text='POS TAGS FOR WORDS ARE {}'.format(output_result), after_disambiguity='AFTER DISAMBIGUATION {}'.format(output_disambi))
 
 
-# @app.route('/bert',methods=['POST'])
-# def bert():
-#     return render_template('index.html', prediction_text='Hello world {}'.format("Hello"))
-# @app.route('/predict_api',methods=['POST'])
-# def predict_api():
-#     '''
-#     For direct API calls trought request
-#     '''
-#     data = request.get_json(force=True)
-#     prediction = model.predict([np.array(list(data.values()))])
-
-#     output = prediction[0]
-#     return jsonify(output)
-
 if __name__ == "__main__":
     app.run(debug=True)
